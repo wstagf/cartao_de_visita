@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernanda Paiva - Psicóloga Neuropsicóloga</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0;
+        }
+
+        .card-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: white;
+            color: #333;
+            padding: 30px 30px 20px;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .crp {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .service-item::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .contact-text {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .phone {
+            font-size: 16px;
+            font-weight: 600;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #999;
+            background: #f8f9fa;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                min-height: 300px;
+            }
+
+            .header {
+                padding: 30px 20px 20px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                padding: 14px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Imagem -->
+            <div class="card-image">
+                <img src="fernanda.png" alt="Fernanda Paiva - Psicóloga Neuropsicóloga">
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="card-content">
+                <!-- Header -->
+                <div class="header">
+                <div class="name">Fernanda Paiva</div>
+                <div class="title">Psicóloga Neuropsicóloga</div>
+                <div class="crp">CRP 09/3607</div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <!-- Psicoterapia -->
+                <div class="section">
+                    <div class="section-title">Psicoterapia</div>
+                    <div class="services-list">
+                        <div class="service-item">Educação Parental</div>
+                        <div class="service-item">Neurodivergentes</div>
+                        <div class="service-item">Autismo e TDAH</div>
+                        <div class="service-item">Transtornos Alimentares</div>
+                        <div class="service-item">Dependência Química</div>
+                        <div class="service-item">Depressão e Ansiedade</div>
+                    </div>
+                </div>
+
+                <!-- Avaliações -->
+                <div class="section">
+                    <div class="section-title">Avaliações</div>
+                    <div class="services-list">
+                        <div class="service-item">Neuropsicológica</div>
+                        <div class="service-item">Bariátrica</div>
+                        <div class="service-item">Vasectomia</div>
+                        <div class="service-item">Laqueadura</div>
+                        <div class="service-item">Concurso Público</div>
+                        <div class="service-item">Vocacional</div>
+                    </div>
+                </div>
+
+                <!-- Atendimento -->
+                <div class="section">
+                    <div class="section-title">Atendimento</div>
+                    <div class="services-list">
+                        <div class="service-item">Crianças</div>
+                        <div class="service-item">Adolescentes</div>
+                        <div class="service-item">Adultos</div>
+                        <div class="service-item">Casais</div>
+                    </div>
+                </div>
+
+                <!-- Contato -->
+                <div class="contact-info">
+                    <div class="contact-text">📱 Agende seu atendimento</div>
+                    <div class="phone">(62) 99966-6217</div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://wa.me/5562999666217?text=Olá%20Fernanda,%20gostaria%20de%20agendar%20um%20atendimento."
+                   class="cta-button"
+                   target="_blank">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.2-5.107 5.591-5.107 9.047 0 1.43.274 2.823.804 4.151l-1.285 4.701 4.815-1.261c1.254.692 2.682 1.059 4.147 1.059 5.631 0 10.196-4.564 10.196-10.196 0-2.719-1.055-5.276-2.973-7.196A10.025 10.025 0 0011.586 3.75c-5.631 0-10.196 4.566-10.196 10.196 0 1.43.275 2.823.805 4.151l-1.286 4.701 4.815-1.261c1.254.693 2.682 1.06 4.147 1.06 5.631 0 10.195-4.565 10.195-10.196 0-2.719-1.054-5.276-2.972-7.196a10.025 10.025 0 00-7.193-2.976"/>
+                    </svg>
+                    Abrir WhatsApp
+                </a>
+            </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    Cartão de visitas digital • Clique para entrar em contato
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
