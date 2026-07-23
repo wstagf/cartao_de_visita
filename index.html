@@ -32,282 +32,44 @@
         }
 
         body {
-            font-family: 'Georgia', 'Garamond', serif;
-            background: linear-gradient(135deg, #f5f1e8 0%, #ece6dd 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            background: #f5f1e8;
         }
 
         .container {
-            max-width: 950px;
             width: 100%;
+            max-width: 600px;
         }
 
-        .card {
-            background: white;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-            animation: slideIn 0.6s ease-out;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            padding: 40px;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .card-left {
-            padding-right: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo-section {
-            margin-bottom: 20px;
-            font-size: 32px;
-        }
-
-        .name {
-            font-size: 32px;
-            font-weight: 700;
-            color: #8b4757;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-
-        .title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-
-        .divider {
-            width: 60px;
-            height: 2px;
-            background: #c9a96a;
-            margin: 10px auto 10px;
-        }
-
-        .crp {
-            font-size: 12px;
-            color: #8b4757;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .content {
-            flex: 1;
-        }
-
-        .section {
-            margin-bottom: 25px;
-        }
-
-        .section-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #8b4757;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #c9a96a;
-        }
-
-        .services-list {
-            font-size: 13px;
-            line-height: 1.8;
-            color: #888;
-        }
-
-        .service-item {
-            margin-bottom: 5px;
-        }
-
-        .card-right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .photo-container {
-            width: 280px;
-            height: 380px;
-            border-radius: 50% 50% 40% 40%;
-            overflow: hidden;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(139, 71, 87, 0.2);
-        }
-
-        .photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .contact-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            max-width: 280px;
-            padding: 16px;
-            background: linear-gradient(135deg, #8b4757 0%, #6b3547 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 700;
+        a {
+            display: block;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 71, 87, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            transition: transform 0.3s ease;
         }
 
-        .contact-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(139, 71, 87, 0.4);
+        a:hover {
+            transform: scale(1.02);
         }
 
-        .phone-text {
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .whatsapp-icon {
-            width: 20px;
-            height: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .card {
-                grid-template-columns: 1fr;
-                padding: 25px;
-                gap: 30px;
-            }
-
-            .card-left {
-                padding-right: 0;
-            }
-
-            .name {
-                font-size: 26px;
-            }
-
-            .photo-container {
-                width: 220px;
-                height: 300px;
-            }
-
-            .contact-button {
-                max-width: 220px;
-            }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <!-- LADO ESQUERDO -->
-            <div class="card-left">
-                <!-- Cabeçalho -->
-                <div class="header">
-                    <div class="logo-section">🧠🌸</div>
-                    <div class="name">Fernanda Paiva</div>
-                    <div class="title">Psicóloga | Neuropsicóloga</div>
-                    <div class="divider"></div>
-                    <div class="crp">CRP 09/3607</div>
-                </div>
-
-                <!-- Conteúdo -->
-                <div class="content">
-                    <!-- Psicoterapia -->
-                    <div class="section">
-                        <div class="section-title">Psicoterapia</div>
-                        <div class="services-list">
-                            <div class="service-item">Educação Parental,</div>
-                            <div class="service-item">Neurodivergentes (autismo, TDAH),</div>
-                            <div class="service-item">Transtornos Alimentares,</div>
-                            <div class="service-item">Dependência Química,</div>
-                            <div class="service-item">Depressão, Ansiedade.</div>
-                        </div>
-                    </div>
-
-                    <!-- Avaliações -->
-                    <div class="section">
-                        <div class="section-title">Avaliações</div>
-                        <div class="services-list">
-                            <div class="service-item">Neuropsicológica</div>
-                            <div class="service-item">Bariátrica</div>
-                            <div class="service-item">Vasectomia</div>
-                            <div class="service-item">Laqueadura</div>
-                            <div class="service-item">Concurso Público</div>
-                            <div class="service-item">Vocacional</div>
-                        </div>
-                    </div>
-
-                    <!-- Atendimento -->
-                    <div class="section">
-                        <div class="section-title">Atendimento</div>
-                        <div class="services-list">
-                            <div class="service-item">Atendimento de crianças,</div>
-                            <div class="service-item">adolescentes, adultos e casal.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LADO DIREITO -->
-            <div class="card-right">
-                <!-- Foto -->
-                <div class="photo-container">
-                    <img src="fernanda.png" alt="Fernanda Paiva - Psicóloga Neuropsicóloga">
-                </div>
-
-                <!-- Botão WhatsApp -->
-                <a href="https://wa.me/5562999666217?text=Olá%20Fernanda,%20gostaria%20de%20agendar%20um%20atendimento."
-                   class="contact-button"
-                   target="_blank">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.2-5.107 5.591-5.107 9.047 0 1.43.274 2.823.804 4.151l-1.285 4.701 4.815-1.261c1.254.692 2.682 1.059 4.147 1.059 5.631 0 10.196-4.564 10.196-10.196 0-2.719-1.055-5.276-2.973-7.196A10.025 10.025 0 0011.586 3.75c-5.631 0-10.196 4.566-10.196 10.196 0 1.43.275 2.823.805 4.151l-1.286 4.701 4.815-1.261c1.254.693 2.682 1.06 4.147 1.06 5.631 0 10.195-4.565 10.195-10.196 0-2.719-1.054-5.276-2.972-7.196a10.025 10.025 0 00-7.193-2.976"/>
-                    </svg>
-                    Agendar Atendimento
-                </a>
-
-                <!-- Texto explicativo -->
-                <div class="phone-text">
-                    (62) 99966 - 6217<br>
-                    <small>Clique no ícone acima para falar comigo</small>
-                </div>
-            </div>
-        </div>
+        <a href="https://wa.me/5562999666217?text=Olá%20Fernanda,%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+            <img src="fernanda.png" alt="Fernanda Paiva - Psicóloga Neuropsicóloga">
+        </a>
     </div>
 </body>
 </html>
